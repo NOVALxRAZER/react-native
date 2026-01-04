@@ -6,6 +6,18 @@
     "dev": "node --watch src/server.js",
     "start": "node src/server.js"
   },
+  "builds": [
+    {
+      "src": "src/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "src/server.js"
+    }
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
