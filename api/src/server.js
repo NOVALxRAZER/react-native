@@ -9,8 +9,5 @@ app.get('/api/health', (req, res) => {
     res.json({ message: 'Success' })
 })
 
-const PORT = process.env.PORT || 3000
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
-})
+// ⛔ DO NOT listen on a port
+export default app
